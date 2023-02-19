@@ -16,7 +16,9 @@ const routes = [
       {
         path: '/home',
         name: '首页',
-        component: () => import('@/views/home/IndexView')
+        component: () => import('@/views/home/IndexView'),
+        children: [
+        ]
       }, {
         path: '/around',
         name: '附近',
@@ -35,6 +37,11 @@ const routes = [
         component: () => import('@/views/my/IndexView')
       }
     ]
+  },
+  {
+    path: '/picker-region',
+    name: 'picker',
+    component: () => import('@/components/PickerRegion.vue')
   }
 
 ]

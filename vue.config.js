@@ -11,5 +11,16 @@ module.exports = defineConfig({
   },
   configureWebpack: {
 
+  },
+  css: {
+    loaderOptions: {
+      less: {
+        lessOptions: {
+          modifyVars: {
+            hack: `true; @import "${resolve('src/styles/common.less')}";`
+          }
+        }
+      }
+    }
   }
 })
